@@ -6,6 +6,8 @@
 
 本项目基于德国开发者 UltraWipf 的优秀开源项目 [OpenFFBoard](https://github.com/Ultrawipf/OpenFFBoard) 进行深度重构与改进。专为 **130ST / 110ST 等大扭矩工业伺服电机** 优化，打造了一款极具工业级鲁棒性（Robustness）的机电软硬一体化解决方案。
 
+![Sim-Drive 整机实装与游戏内测试图](./1.jpg)
+
 ![Sim-Drive 主板正面渲染图](./pcb1.png)
 
 ---
@@ -53,6 +55,13 @@
 * **叠层与阻抗控制**：严格采用 **4 层板 (Top-GND-Power-Bottom)** 结构。指定 `JLC04161H-7628` 压合参数，完美契合 8mil 线宽的 USB 差分对 **90Ω 阻抗匹配**。
 * **完整地平面策略**：采用**统一地平面 (Solid Ground Plane)** 配合 **“逻辑分区布局”**（右侧高压动力区，左侧低压逻辑区）。避免了“切地”带来的跨分割大环形天线辐射。
 * **大电流覆铜与散热**：在 DFN5x6 MOS 管区域进行大面积覆铜，并密布散热过孔 (Thermal Vias)，利用 PCB 铜皮作为天然散热器，使其在 15A 瞬态电流下即可维持被动散热。
+
+### 5. 硬件文件快速入口 (Hardware Files)
+
+* [MCU 原理图 PDF](./hardware/PDF_Schematic1_1_2026-02-19/SCH_Schematic1_1_1-MCU_2026-02-19.pdf)
+* [Driver 原理图 PDF](./hardware/PDF_Schematic1_1_2026-02-19/SCH_Schematic1_1_2-DRIVER_2026-02-19.pdf)
+* [Power 原理图 PDF](./hardware/PDF_Schematic1_1_2026-02-19/SCH_Schematic1_1_3-POWER_2026-02-19.pdf)
+* [BOM](./hardware/BOM_v1.03_PCB1_103.xlsx)
 
 ![Sim-Drive 主板背面渲染图](./pcb2.png)
 
